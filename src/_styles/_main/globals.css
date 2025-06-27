@@ -1,0 +1,53 @@
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: var(--space-sm);
+}
+
+/* Buttons */
+button {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius);
+  background-color: var(--primary);
+  color: white;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+  padding: var(--space-xs);
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  width: 100%;
+}
+
+/* Scrollbar styling (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--muted);
+  border-radius: var(--radius);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
