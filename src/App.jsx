@@ -1,11 +1,10 @@
 // import { useState } from "react";
-import "./App.css";
+import Layout from "./_layout/Layout";
 
 function App() {
   return (
     <>
-      <h1>Green</h1>
-      <h2>Bluue</h2>
+      <Layout></Layout>
     </>
   );
 }

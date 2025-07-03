@@ -1,0 +1,5 @@
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}

@@ -1,5 +1,22 @@
 :root {
-  /* Colors */
+  /* || Golden Ratio constant */
+  --phi: 1.618;
+
+  /* || Responsive breakpoints for media queries */
+  --break-sm: 480px;
+  --break-md: 768px;
+  --break-lg: 1024px;
+  --break-xl: 1280px;
+
+  /* || Base viewport range: mobile-first scaling from 320px to 1440px */
+  --min-vw: 320;
+  --max-vw: 1440;
+
+  /* || Base spacing unit (mobile-first) */
+  --space-base: clamp(0.5rem, 1vw, 1.25rem);
+  --space-base: clamp(0.5rem, 1vw + 0.25rem, 1.25rem);
+
+  /* || Colors */
   --primary: #007bff;
   --secondary: #6c757d;
   --accent: #ffb703;
@@ -8,32 +25,41 @@
   --muted: #6c757d;
   --background: #ffffff;
 
-  /* Fluid typography (clamp: min, preferred, max) using golden ratio */
+  /* || Fluid typography (clamp: min, preferred, max) using golden ratio */
   --font-size-xs: clamp(0.875rem, 1vw + 0.5rem, 1rem);
   --font-size-sm: clamp(1rem, 1vw + 0.8rem, 1.25rem);
   --font-size-md: clamp(1.25rem, 1vw + 1rem, 1.618rem);
   --font-size-lg: clamp(1.618rem, 1vw + 1.25rem, 2.618rem);
   --font-size-xl: clamp(2.618rem, 2vw + 1.5rem, 4.236rem);
+  /* || Fluid typography */
+  --font-base: clamp(1rem, 1.2vw + 0.5rem, 1.75rem);
+  --font-lg: clamp(1.5rem, 2.5vw + 0.5rem, 2.75rem);
+  --font-xl: clamp(2rem, 4vw + 0.5rem, 4rem);
 
-  /* Line height ratios (fixed for now, but scalable if needed) */
+  /* || Line height ratios  */
   --line-height-sm: 1.4;
   --line-height-md: 1.618;
   --line-height-lg: 2;
 
-  /* Fluid spacing system */
-  --space-xs: clamp(0.5rem, 0.5vw, 0.618rem);
-  --space-sm: clamp(1rem, 1vw, 1.25rem);
-  --space-md: clamp(1.25rem, 1.25vw, 1.618rem);
-  --space-lg: clamp(2rem, 2vw, 2.618rem);
-  --space-xl: clamp(3rem, 3vw, 4.236rem);
+  /* || Golden ratio scale */
+  --space-xs: clamp(0.25rem, calc(var(--space-base) / var(--phi)), 0.5rem);
+  --space-sm: var(--space-base);
+  --space-md: clamp(0.75rem, calc(var(--space-base) * var(--phi)), 2rem);
+  --space-lg: clamp(
+    1rem,
+    calc(var(--space-base) * var(--phi) * var(--phi)),
+    3rem
+  );
+  --space-xl: clamp(
+    1.25rem,
+    calc(var(--space-base) * var(--phi) * var(--phi) * var(--phi)),
+    5rem
+  );
 
-  /* Radius & Shadows */
+  /* || Radius & Shadows */
   --radius: 0.5rem;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  /* Responsive breakpoints for media queries */
-  --break-sm: 480px;
-  --break-md: 768px;
-  --break-lg: 1024px;
-  --break-xl: 1280px;
+  /* || Container max width */
+  --container-width: 70rem;
 }
