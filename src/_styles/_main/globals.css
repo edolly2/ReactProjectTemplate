@@ -60,15 +60,15 @@ body {
 button {
   padding: var(--space-xs) var(--space-sm);
   border-radius: var(--radius);
-  background-color: var(--primary);
-  color: white;
+  /* background-color: var(--primary); */
+  /* color: white; */
   font-weight: 600;
   transition: background 0.3s ease;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  /* background-color: #0056b3; */
 }
 
 /* ===== || Inputs ===== */

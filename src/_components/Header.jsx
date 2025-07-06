@@ -5,7 +5,7 @@ import SiteBrand from "../_components/SiteBrand";
 const Header = () => {
   return (
     <header>
-      <SiteBrand />
+      <SiteBrand brandTitle="Website" />
       <NavBar />
     </header>
   );

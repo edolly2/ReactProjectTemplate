@@ -7,7 +7,7 @@ const NavBar = () => {
   const width = useWindowSize();
   const isMobile = width < 768;
 
-  return isMobile ? <MobileNav /> : <DesktopNav />;
+  return isMobile ? <MobileNav brandTitle="Website" /> : <DesktopNav />;
 };
 
 export default NavBar;
